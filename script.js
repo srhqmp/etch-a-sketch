@@ -1,7 +1,9 @@
 const sketchArea = document.querySelector(".sketch-area");
 const adjustButton = document.querySelector(".adjust-button");
 const resetButton = document.querySelector(".reset-button");
-const changeColorButton = document.querySelector(".change-color-button");
+
+const colorButton = document.querySelector(".change-color-button");
+const bnwButton = document.querySelector(".change-bnw-button");
 
 let isColored = false;
 
@@ -72,11 +74,16 @@ resetButton.addEventListener("click", () => {
   generateGrids(16);
 });
 
-changeColorButton.addEventListener("click", () => {
-  changeColorButton.textContent = isColored
-    ? "change to colored pen"
-    : "change to black&white pen";
-  isColored = !isColored;
+bnwButton.addEventListener("click", () => {
+  bnwButton.style.display = "none";
+  colorButton.style.display = "block";
+  isColored = true;
+});
+
+colorButton.addEventListener("click", () => {
+  colorButton.style.display = "none";
+  bnwButton.style.display = "block";
+  isColored = false;
 });
 
 generateGrids(16);

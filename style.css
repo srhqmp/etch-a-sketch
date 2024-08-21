@@ -1,29 +1,69 @@
-* {
-  /* outline: 1px solid red; */
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --text-color: #45474b;
+  --primary-color: #f4ce14;
+  --secondary-color: #379777;
+  --background-color: #f5f7f8;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--background-color);
 }
 
 h1 {
   text-align: center;
+  font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 6px;
+  color: var(--secondary-color);
+  margin-top: 48px;
+  margin-bottom: 0;
 }
 
 .container {
   display: flex;
+  justify-content: center;
+  gap: 36px;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  width: 75px;
+  height: 75px;
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--background-color);
+  border-radius: 100%;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+button:hover {
+  opacity: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.buttons {
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 24px;
+  justify-content: flex-start;
+  margin-top: 170px;
 }
 
 .sketch-area {
   width: 960px;
-  border: 2px solid black;
-}
-
-button {
-  margin-bottom: 24px;
+  border: 36px solid var(--primary-color);
+  border-radius: 24px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .row {
@@ -34,6 +74,23 @@ button {
 .square {
   width: 50px;
   height: 50px;
-  border: 1px solid saddlebrown;
+  border: 1px solid var(--background-color);
   flex: 1;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.change-color-button {
+  display: none;
+}
+
+.copyright {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.copyright a {
+  color: var(--secondary-color);
+  text-decoration: none;
 }

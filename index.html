@@ -9,14 +9,35 @@
     <script type="module" src="script.js" defer></script>
   </head>
   <body>
-    <h1>Etch a Sketch</h1>
     <div class="container">
       <div class="buttons">
-        <button class="reset-button">Reset</button>
-        <button class="adjust-button">Adjust</button>
-        <button class="change-color-button">change to colored pen</button>
+        <button class="reset-button">
+          <img src="images/reset.svg" width="30" alt="Reset Icon" />
+        </button>
+        <button class="adjust-button">
+          <img src="images/resize.svg" width="30" alt="Resize Icon" />
+        </button>
+        <button class="change-bnw-button">
+          <img src="images/pen-bnw.svg" width="30" alt="Pencil" />
+        </button>
+        <button class="change-color-button">
+          <img src="images/pen-colored.svg" width="30" alt="Pencil Colored" />
+        </button>
       </div>
-      <div class="sketch-area"></div>
+      <div class="sketch">
+        <h1>Etch a Sketch</h1>
+        <div class="copyright">
+          Copyright &copy;
+          <a
+            href="https://github.com/srhqmp"
+            target="_blank"
+            rel="noreferrer noopener"
+            >srhqmp</a
+          >
+          2024
+        </div>
+        <div class="sketch-area"></div>
+      </div>
     </div>
   </body>
 </html>
